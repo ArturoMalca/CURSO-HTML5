@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+        }
+
+        th {
+            height: 2em; background-color: blue;color: #fff;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        /* ------------------------------- */
+        /* td:nth-child(even),th:nth-child(even) {
+            background-color:rgba(150, 212, 212, 0.4);
+        } */
+        tr:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        }
+        tr{
+            border-bottom: 1px solid #333;
+        }
+        tr:hover{
+            background-color: #999; color:#fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+            </tr>
+            <tr>
+                <td>Elias</td>
+                <td>Gutierres</td>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+            </tr>
+            <tr>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+            </tr>
+            <tr>
+                <td>Elias</td>
+                <td>Gutierres</td>
+                <td>Jhon Arthur</td>
+                <td>Smith</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
