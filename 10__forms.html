@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .frm {
+            background-color: rgb(219, 121, 8);
+            padding: 20px;
+        }
+
+        .frm form {
+            background-color: #18181ae5;
+            width: 350px; /*Cambio de 300px a 350px*/
+            margin: 0 auto;
+            padding: 1em;
+            font-size: 1.2em;
+            /* agregado color aqui para generalizar en todo los formularios 
+            -adicional luego de clase*/
+            color: #fff;
+        }
+
+        /* agregado luego de clase, relleno a elemento label, 
+        para dejar espacio antes de input- se agrego clase - lblcambios para no dañar a radio y checkbox*/
+        .lblcambios {
+            padding: 8px 5px;
+            /* background-color: aqua; */
+            display: block;
+        }
+
+        .frm form input[type="text"],
+        .frm form input[type="password"],
+        input[type="submit"],
+        .frm form input[type="email"],
+        select,
+        input[type="date"] {
+            width: 100%;
+            outline: none;
+            padding: 8px 4px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .frm form input[type="submit"] {
+            margin-top: 15px;
+            cursor: pointer;
+            background-color: rgb(9, 160, 59);
+            color: #fff;
+        }
+
+        /* agregado luego de clase -ADICIONAL al pasar mouse sobre boton este obscurece*/
+        .frm form input[type="submit"]:hover {
+            background-color: rgb(9, 95, 37);
+        }
+
+        /* agregado estilos a textArea adiconal a clase */
+        textarea {
+            width: 100%;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            outline: none;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frm">
+        <form action="" method="get">
+            <label for="user" class="lblcambios">usuario</label>
+            <input type="text" name="user" id="user" required placeholder="Ingresar Aquí..." maxlength="5">
+            <label for="password" class="lblcambios">password</label>
+            <input type="password" name="password" id="password" required placeholder="Ingresar Aquí...">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+
+
+    <div class="frm" style="margin: 10px 0;">
+        <form action="" method="get">
+            <label for="user" class="lblcambios">user</label>
+            <input type="text" name="user" id="user" placeholder="Ingresar Texto" value="Arturo" readonly>
+
+            <label for="email" class="lblcambios">email</label>
+            <input type="email" name="email" id="email" placeholder="Ingresar Texto" required>
+
+            <input type="radio" name="r0" id="r0" value="HTML5">
+            <label for="r0">HTML5</label>
+            <input type="radio" name="r1" id="r1" value="CSS3">
+            <label for="r1">CSS3</label>
+            <input type="radio" name="r2" id="r2" value="JS">
+            <label for="r2">JS</label>
+            <input type="radio" name="r3" id="r3" value="PHP">
+            <label for="r3">PHP</label>
+
+            <label for="cb1">Básico</label>
+            <input type="checkbox" name="cb1" id="cb1" value="Básico">
+            <label for="cb2">Intermedio</label>
+            <input type="checkbox" name="cb2" id="cb2" value="Intermedio">
+            <label for="cb3">avanzado</label>
+            <input type="checkbox" name="cb3" id="cb3" value="Avanzado">
+
+            <label for="selection" class="lblcambios">Califica</label>
+            <select name="selection" id="selection">
+                <!-- <option value=""></option> -->
+                <option value="Bueno">Bueno</option>
+                <option value="Regular">Regular</option>
+                <option value="Malo">Malo</option>
+            </select>
+
+            <label for="archivos">archivos</label>
+            <input type="file" name="archivos" id="archivos" multiple>
+
+            <label for="txtArea" class="lblcambios">Comentarios:</label>
+            <textarea name="txtArea" id="txtArea" cols="30" rows="10" placeholder="ANY Text"></textarea>
+
+            <label for="fecha" class="lblcambios">fecha</label>
+            <input type="date" name="fecha" id="fecha">
+
+            <!-- ADICIONAL A CLASE: se cambio inpu:submit para usar estilos ya declarados -->
+            <!-- <button>Enviar Datos</button> -->
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>
