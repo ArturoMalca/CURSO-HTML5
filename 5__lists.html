@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        ul,
+        ol {
+            background-color: #000;
+            color: #fff;
+            list-style: none;
+            overflow: hidden;
+        }
+        /* adicional a clase se agrego un color diferente a ol*/
+        ol{
+            background-color: #00f;;
+        }
+        /* adicional a clase se agrego 
+        ,ol li  para tomar los mismos estilos con ul li*/
+        ul li, ol li {
+            float: left;
+            padding: 20px;
+            cursor: pointer;
+        }
+     /* adicional a clase se agrego 
+        ,ol li:hover  para tomar los mismos estilos con ul li:hover*/
+        ul li:hover, ol li:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Listas Desordenadas -->
+    <ul>
+        <li>Home</li>
+        <li>Logo</li>
+        <li>Phone</li>
+    </ul>
+    <!-- Listas Ordenadas -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- Listas de Descripcion -->
+    <dl>
+        <dt>Bebida</dt>
+        <dd>Cafe</dd>
+        <dd>Te</dd>
+
+        <dt>Comida</dt>
+        <dd>Ceviche</dd>
+        <dd>Mariscos</dd>
+    </dl>
+</body>
+
+</html>

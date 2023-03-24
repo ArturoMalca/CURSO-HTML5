@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Elements</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 40px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* menu */
+        nav {
+            background-color: #999;
+            width: 30%;
+            float: left;
+            padding: 20px;
+            height: 300px;
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* contenido de texto */
+        article {
+            background-color: #f1f1f1;
+            float: left;
+            width: 70%;
+            padding: 20px;
+            text-align: justify;
+            height: 300px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* pie de page */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        /* modo adaptativo */
+        @media screen and (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* trabajando extra con lo ya aprendido */
+        #pSantiago {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Ciudades</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="myFunction('pLima')">Lima</a></li>
+                <li><a href="#" onclick="myFunction('pSantiago')">Santiago</a></li>
+            </ul>
+        </nav>
+        <article>
+            <p id="pLima">
+                Lima, oficialmente (según la Constitución) Ciudad de Lima,11​ es la capital de la República del Perú.12​
+                Está ubicada en la costa central del país, a orillas del océano Pacífico, integrando una extensa y
+                poblada área urbana, flanqueada por el desierto costero y extendida sobre los valles de los ríos
+                Chillón, Rímac y Lurín.
+
+                La proyección censal del 2022 estableció una población de 13 943 800 habitantes, cifra que la convierte
+                en la ciudad más poblada del país.1​ El conglomerado urbano conformado por Lima y Callao, por su lado,
+                agrupa una población de 11 098 000 habitantes1​ distribuida en cincuenta distritos, donde la provincia
+                de Lima concentra cuarenta y tres distritos y la provincia de Callao, siete distritos. La aglomeración
+                urbana se organiza en conos o ejes de la ciudad: Lima Norte, Lima Sur, Lima Este y Lima Centro.
+
+                En la actualidad, está considerada como el centro político, económico, industrial, cultural, financiero
+                y comercial del país. En el plano internacional, es la quinta ciudad más grande de América Latina, la
+                cuarta por PBI, la quinta por número de habitantes y una de las treinta aglomeraciones urbanas más
+                pobladas del mundo.13​ Por su importancia geoestratégica, ha sido definida como una ciudad global de
+                «clase beta+».14​
+
+                El 18 de enero de 1535, fue fundada con el nombre de Ciudad de los Reyes por el conquistador español
+                Francisco Pizarro dentro de la región agrícola conocida por los nativos costeños como Limac,
+                posteriormente como Lima, nombre que adquirió con el tiempo.15​ Fue la capital del virreinato del Perú
+                por sus valles y su baja altitud sobre el nivel del mar en reemplazo de Jauja, que se encuentra en las
+                alturas de los Andes.
+            </p>
+            <p id="pSantiago">
+                Santiago (nombre oficial), también conocido como Santiago de Chile, es la capital y ciudad principal de
+                Chile y de la Región Metropolitana de Santiago, de la que además es el centro geográfico y cuya
+                población se concentra en su gran mayoría en la ciudad. Situada a orillas del río Mapocho, Santiago fue
+                fundada por el español Pedro de Valdivia, bajo el nombre de Santiago de Nueva Extremadura en honor al
+                apóstol Santiago, convirtiéndose así en la capital de la Gobernación de Nueva Extremadura,7​ en el siglo
+                xvi. Actualmente es el centro económico y administrativo del país, además de ser la aglomeración urbana
+                más grande y con mayor cantidad de población del país.
+
+                La ciudad alberga los principales organismos públicos (palacio de gobierno, Poder Judicial y una serie
+                de organismos internacionales), comerciales, culturales y financieros del país, a excepción del Congreso
+                Nacional,8​ la Armada nacional, el Servicio Nacional de Pesca (Sernapesca) y el Ministerio de las
+                Culturas, las Artes y el Patrimonio, ubicados en la ciudad de Valparaíso. Es sede, también, de la
+                Comisión Económica para América Latina y el Caribe (Cepal).
+
+                Aunque generalmente se concibe como una única ciudad, Santiago no constituye una sola unidad
+                administrativa, sino forma parte del territorio de al menos 43 comunas, de las cuales 28 se encuentran
+                completamente dentro del radio urbano y 15 municipalidades fuera de él, pero todas muy conectadas a
+                través de modernas autopistas y avenidas. La mayor parte de la metrópoli se encuentra dentro de la
+                provincia de Santiago, y partes de ella se encuentran en comunas pertenecientes a otras provincias de la
+                Región Metropolitana, estas son San Bernardo, Calera de Tango, Buin, Puente Alto, Talagante, Peñaflor,
+                Padre Hurtado, El Monte e Isla de Maipo.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>Footer - &#169;ArturoCodigo &#128513;</p>
+    </footer>
+
+
+    <script>
+        function myFunction(id) {
+            var x=document.getElementById(id);
+            if (id == "pLima") {
+                document.getElementById("pSantiago").style.display="none";
+                x.style.display="block";
+            }else{
+                document.getElementById("pLima").style.display="none";
+                x.style.display="block";
+            }
+        }
+    </script>
+</body>
+
+</html>
